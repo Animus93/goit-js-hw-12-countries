@@ -18,7 +18,7 @@ function input () {
 
 export default function fetchCountries (searchQuery) {
     return new Promise((resolve, reject) => {
-       return fetch(`https://restcountries.com/v3.1/name/${searchQuery}`)
+       return fetch(`https://restcountries.com/v2/name/${searchQuery}`)
         .then(response => {
             const error = `Ошибка! ${response.status} ${response.statusText}`;
             if(response.ok){
