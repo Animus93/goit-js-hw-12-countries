@@ -1,6 +1,32 @@
 body {
-    background-color: antiquewhite;
+    background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612321633_123-p-shabloni-dlya-prezentatsii-korichnevii-fon-164.jpg);
+
+    
 }
-/* .pnotify {
-    background-color: rgb(212, 161, 189);
-} */
+
+.content {
+    background: rgba(255, 255, 255, 0.562);
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    padding: 1% 10%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+    border-style:groove;
+    border-color: black;
+}
+
+input {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.js-mrkap-plce {
+    height: fit-content;
+    width: fit-content;
+
+}

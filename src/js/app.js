@@ -18,18 +18,19 @@ function input () {
 
 export default function fetchCountries (searchQuery) {
     return new Promise((resolve, reject) => {
-       return fetch(`https://restcountries.com/v2/name/${searchQuery}`)
+        fetch(`https://restcountries.com/v2/name/${searchQuery}`)
         .then(response => {
-            const error = `Ошибка! ${response.status} ${response.statusText}`;
+            const error = `Страна с таким названием не найдена Код ошибки:  ${response.status} ${response.statusText}`;
             if(response.ok){
                 onRequest(response.json())
                 return resolve(response);
             };
-            return reject(error);
-        });
+            throw new Error(error);
+        }).catch(err => modal(err));
 })};
 
 function onRequest (data) {
+    console.log(data)
     data.then(newArray =>{
         if(newArray.length > 10){
             return modal('Уточните ввод');
